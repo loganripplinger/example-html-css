@@ -1,0 +1,134 @@
+/* Element selector */
+/* Selects all elements of the same type */
+h1 {
+	font-size: 20pt;
+}
+
+p {
+	font-size: 12pt;
+}
+
+
+/* Class selector */
+/* Selects all classes with that name. You can use more than one on an html tag. */
+.alert {
+	color: red;
+	font-size: 32pt;
+}
+
+.thick {
+	font-weight: bold;
+}
+
+
+/* ID selector */
+/* Selects any id="" tags */
+#intro {
+	font-weight: bold;
+	font-size: 15pt;
+}
+
+
+/* Compound selector */
+/* Allows us to share the attributes in our tags to all of the items */
+h2, h3, #offical {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Desendent selector */
+/* Selects elements nested inside parents, all the way down. */
+#nav li {
+	background-color: lightblue;
+}
+
+
+/* Child selector */
+/* Selects a child element of parent, no further. */
+#nav > li {
+	border: 1px solid black;
+}
+
+
+/* Adjacent sibling selector */
+/* This selects an element if it follows the first one, as long as they are siblings and not parent/child */
+h2 + p {
+	font-style: italic;
+}
+
+
+
+/* General sibling */
+/* This selects ALL siblings */
+h2 ~ p {
+	font-size: 18pt;
+}
+
+
+/* Universal selector */
+/* Applies to all elements */
+* {
+	font-family: "Times New Roman", Times, serif;
+}
+
+
+/* Attribute selector */
+/* bit complex here we go 
+
+Format:
+html[attribute match-operator value]
+
+Html elements include a, p, img, etc.
+
+Value is the value you are looking to match with
+
+
+Match-operator include the following:;
+^=
+Matches on arrtibutes START with the matching html value
+
+$=
+Matches on arrtibutes ENDING with the matching value
+
+*=
+Matches on arrtibutes using anywhere match
+
+~=
+Matches on arrtibutes with " " + value + " "
+
+|=
+Matches on arrtibutes with -value-
+
+*/
+img[alt="Cat"] {
+	border: 1px solid black;
+}
+
+
+/* Pseudo class */
+/* Selects an elements via the relationship described 
+
+a:link
+Selects link in default state
+
+a:visited
+Selects visited links
+
+a:hover
+Selects hovered links
+
+a:active
+Selects links when they are being clicked
+
+p:first-child
+Selects first child elements inside parent class
+
+p:last-child
+Selects last child elements inside parent class
+ */
+a:visted {
+	text-decoration: none;
+}
+
+
+
